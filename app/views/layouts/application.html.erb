@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bikefinal</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+  
+ <!-- Custom CSS -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-modern-business/css/modern-business.css" rel="stylesheet">
+</head>
+<body align="center">
+  
+    
+     <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" >DUBLIN BIKE ON RENT</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/index">Home</a>
+                    </li>
+                   
+                   <li>
+                        <a href="/hirenow">Bikes</a>
+                    </li>
+                     <li>
+                        <a href="/aboutus">Contact</a>
+                    </li>
+                    <li>
+                        <a href="/index">LOGIN/LOGOUT </a> 
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<%= yield %>
+
+
+
+      <header class="jumbotron hero-spacer">
+            <h1 align='center'> Welcome to Dublin Bike </h1>
+          <%= image_tag('finalbike.jpg',:size=>'1250x450')=%>
+            
+      </header>
+        <hr>
+    <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 align='center'>Latest Bikes</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <%= image_tag('bike3.jpg',:size=>'800x500')=%>
+                    <div class="caption">
+                        <h3>Mountain Bike</h3>
+                        <p></p>
+                        <p>
+                            <a href="/hirenow" class="btn btn-primary">Hire Now</a> <a href="/biked6" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <%= image_tag('bike1.jpg',:size=>'800x500')=%>
+                    <div class="caption">
+                        <h3>Crusier Bike</h3>
+                        <p></p>
+                        <p>
+                            <a href="hirenow" class="btn btn-primary">Hire Now</a> <a href="biked5" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <%= image_tag('bike2.png',:size=>'800x500')=%>
+                    <div class="caption">
+                        <h3>BMX Bike</h3>
+                        <p></p>
+                        <p>
+                            <a href="hirenow" class="btn btn-primary">Hire Now</a> <a href="biked3" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                     <%= image_tag('bike4.jpg',:size=>'800x500')=%>
+                    <div class="caption">
+                        <h3>Spcial Ladies Bike</h3>
+                        <p></p>
+                        <p>
+                            <a href="hirenow" class="btn btn-primary">Hire Now</a> <a href="biked1" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        
+         <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Hire Latest Bike easily just sig-up on our web-site! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    
+                    <img class="icon icons8-Phone-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACyklEQVRoQ82Z8VEXMRCFHxWIFSgVoBWoFQgdSAXYgViBUoFagVCBUgFYAdCBViDzMRcmHJdLNsndXmYY/vhdkv1u3yYvuR3NtwNJx5LeSvot6VTSWaaPy887iVl3JX2R9GHi93cDlEvAqUmnQID4JelVotONpNeS/m6JZAxC8D8lvcwEicQ+bhUECDJBRkrapiQWMkIGLg0QgG5KYgEEiFRNzGVnMxID5ETSpxItJZ7ZhMQAuS4o7jnOTUgMkP8N2Qhd3SUGCDv2mw4wrhIDBMvxvgMIEtvrME7VEICwsWFHejRAAFq9AcIeQsH3aCnv1mPs2THCxFeS9htnuxhccuMwdd0DSA95uRc7rwB/hbaf1b0PuWaDmGNNt+zw2Hrk6dZikNqs/EgcwFaFGq8yNVl5voVD1tRySa28MLzOz4PxNHTp/+gUCBcNHLAszXXFGhd7HLjVtnB+B8at4OduUQjKIjGeB8blUmLOUnBi5ORoaW4wOW9Us4q5wORAyIa1XkKfQ0sqW58tAWGj5PBlNZXfJR21BljavwSEsbD6SMbqxXgBZGbxBaAUBBiKn8CsMKvUjAUEGG7nuVK1NisMcjZl0QoCADf036wkgzSpmdSmGX/CYHisEs+jgmyrAWmB4S1TM3FwWCIuCPk/1b5Kws/NZqgWpAWGvpxIzweAqW8wY6BsdlpAQkC9bmCy8pGUzE4rSGtmSoIvyk4PEA8Y5nyUnV4gXjAPtdMTJOwzWBPrplkjsbjPUW+QFgfQAnO1BAgB4c1wzVajWQ2zFAgBYTOQWY+b/hzgxZIgYfKaw1ku8PHvh2uAhLpBapY7gFKY+wvCtUCWktqf8DV6TZDwhjGH1E5rdoBgrHsz6QES1w7msWbP+TdAPBwJPEGC3ICxAD2B8M5IXMws1dh5/ub2nkdyigfwzsjUysRmymkR/QPIp/Pboa5YyifbHa+YgHGImJ0PAAAAAElFTkSuQmCC" width="50" height="50">
+                    <p>123-456-6789</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                  
+                  <!-- Email Filled icon by Icons8 -->
+<img class="icon icons8-Email-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFGElEQVRoQ7WajZVMQRCFayNABIgAESACRIAIEAEiQASIABFYESACRIAION94Nafmvqr+eTP6nDl7drZfVd+qW7e6++2Z/Z9x0cyumdmV5aNezs3st5l9OZX7s1MZMrM7ZnbXzG4Vi69cAeq9mX0ws+9b13MsECL+dAFAFo4dgHpjZm9nDW0F4gAezDocnE9mniyZGnpkCxAy8NjMRjLwI6HLdTO7MLS6f5R7aGa/evNngJCF10sNVHa/LtSAIr1CBhD15J8KHCBu9+yNAsHpxyILqA+Re3ZEsZJdsgxVLydR6oIZAdICQVGygG7qe9QIf8fei1kwPSAVCLKA1EKh/zHwi3rRi+IgYDeyzLeAkO5vCZ2oA3g9k4VY4KONEP8ESsHwHTVzMFpAqAkWHMcoCIQhNsgsa9SVN8IqKBUYpPllNFoBoXCR2VkQOH60FP4o5bRnvFtoy/PQ6/miWFHVAH41siIDQjQ/C6WgA9+36AR9kGd+bhksmm0KQDTYqBm24wAgAd+NDAgG78tD9zpdFkcozUiTbIEkUNEGVPbAkLkozfxOVlIgRJ0Cj4MooVDVyKLlcz8tXMapN0hvhMhs1jOin1gLrEGzhYLt7GpGKCA4Hgeoq10pi4KGOogkAHvdveoZbu+S0Fmz8mrpYysgPyW1NLxqY5jVEguYbZJVRjPfGmgyvlPWmJFm6pKoZ/LcAt6qDXrDzYG6zNa4wxCBKFp2rkQ9G1kU99Fprbj4mwpM5Tuj8o5+EYhGZc8/cZ51/BF5rvBl9g6kVR78I7/T5c8jEJ1QSW6WDc4MRHXLyOy1BKYJhKhQ6HHspU2+R54j5Y6hFKa11nr2mkCofAzGkTXLbF6vWbaylPWtVnazgB9QaxTIaFGOUkwFhlpr7Q6yde5o6FEfBaK0qgRhFIja68l3V35HgGQ02KV1dNUyb7Zv8bgyYtUQR4CMzJnBxFmEM4uPuEGs7JSMmKGWnlF66jJb5KvDkhjIArnaNI7I7ymBZJtF3SBqIFSmD7r/TENUIL3tfSsjs0WeZeNApiMQttzxoK/bhFNlJOvkLdGALRwVYhNeyXQEoooAMDjoQ4EcnNAmqpxFxeNwa3OK2eyMtNqLRSC9PU+285yV3+xSo9WLsjWl6haBZH1ClYQzdbzN0Ky1ElMdoKo9XTYfSlEvq5On7qdU25U+WUShJIW3BQTP6BqoCW5MsnuCch+mRrJuG7OCE8DpzTnfIan0Fr8yYi6nPr7Xi74I2mUXRnB7U72yAAR+/L4NP/tXDtkOVw/4ehmWSeFErW+ayoKhk74R2Bd9BiTjJpRju+6jdQW0aaXFQ9QEvtjPAUIv//ZiU12ZZpcBWvhkhvro3U35GlkUNYZtPr23VtDU6yQDcaB2FRD4SirVWVZs/oJGb80dADsAf8np9UNk6Q96c+IvjQgQz1BnGQh6Dzb2V7it2/iKPiycaOjAaUw9TnoXdPE9vM6v7pJTCe696MnugQEw/JJyY8GgXmRMT4vDfSTzW4EhgmRn+p14A1zrhWsJImtGlY8KDPORa4qYWph5ixV9QSPunKvr2e5dco9a0dmI5Loi8RPVqYb/rwqqxKe60eR5AoTvZpBmgGAUh2RH1aZVClrErS4f7XgPoR67YxZIbIjQabSHdBcSJgCAQuczTNWtQNwvtCDt8RJhZtFxLr2BbE8BcAPHAnE7cB7K+NuoUepRR/5vTr2e0wzQqYBkTmKzA6jvFpg70iynMvsX7xdiQgKTZNYAAAAASUVORK5CYII=" width="50" height="50">
+                    <p><a href="mailto:your-email@your-domain.com">feedback@dublinbikes.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; DUBLIN BIKES 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    
+    <!-- /.container -->
+
+  
+
+  </body>
+</html>

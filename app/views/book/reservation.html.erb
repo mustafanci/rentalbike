@@ -1,0 +1,55 @@
+
+<div id="panel_right"> 
+        <!-- Profile validation and links appearance logic -->
+         <!-- To make a decision of what options to provide when user loged-in or not-->
+            <a rel="nofollow" data-method="delete" href="/d/users/sign_out">Sign Out</a> <!--Destroy session -->
+            <div id="name">
+                <a href="/users/13">mh17114@gmail.com</a> <!-- Displays user's email address on the right top corner of the screen and links to its show/edit page --> 
+            </div>
+            
+             <!-- Logic which displays Reservations and Profile options only in case user has a profile -->
+                <a href="/profiles/9/reservations">My reservations</a>
+                <a href="/profiles/9">My Profile</a>
+                        
+                            
+        
+    </div>
+</nav>
+<p class="alert" ></p>
+
+<h1>New Reservation</h1>
+
+<div class="main">
+<form class="new_reservation" id="new_reservation" align="center" action="/profiles/9/reservations" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="KmXHadwRUcOU8IwzKJXvgWNpq8p0Hwap008OGNc+ET0BaJcDRkjkjpsS2rM4FlkuMRGQQr6InpvSvPm+Udw6sQ==" />
+
+  <!-- Date-picker functionality using calendar -->
+  <div class="ro main">
+    <label for="reservation_start_from">Start from</label><br>
+  
+    <input type="date" >  
+  </div>
+  
+  <!-- Datepicker javascript's settings -->
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker({format: 'dd-mm-yyyy', todayHighlight:'TRUE', autoclose: true }).on('changeDate', function (ev) {
+     $(this).datepicker('hide');
+    });
+  });
+</script>
+  <div class="field main">
+    <label for="reservation_duration">Duration</label><br>
+    <input type="number" name="reservation[duration]" id="reservation_duration" />
+  </div>
+  <div class="field ro">
+    <label for="reservation_profile_id">Profile</label><br>
+    <input readonly="readonly" type="text" value="9" name="reservation[profile_id]" id="reservation_profile_id" /> <!-- Read-only just to provide a profile id for reference/information -->
+  </div>
+  <div class="field ro">
+    <label for="reservation_bike_id">Bike</label><br>
+    <input type="text" name="bike_id" id="bike_id" value="1" readonly="readonly" /> <!-- Read-only just to provide a bike id for reference/information -->
+  </div>
+  <div class="actions">
+    <input type="submit" name="commit" value="Create Reservation" />
+  </div>
+</form></div>

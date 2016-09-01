@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   resources :customers
   
    root to: "customers#index"
+   get '/welcome' => 'book#welcome'
+   get '/thanks' => 'info#thanks'
+  
    
   get '/hirenow' =>'hire#hirenow'
   get '/reservation' =>'book#reservation'

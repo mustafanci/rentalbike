@@ -44,8 +44,12 @@
                      <li>
                         <a href="/aboutus">Contact</a>
                     </li>
+                   
                     <li>
-                        <a href="/index">LOGIN/LOGOUT </a> 
+                        <%= link_to 'REGISTER', new_user_registration_path %> or
+                    </li>
+                    <li>
+                        <%= link_to 'SIGN IN', new_user_session_path %>
                     </li>
                 </ul>
             </div>

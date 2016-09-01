@@ -14,7 +14,7 @@ gem 'rails', '~> 5.0.0.1'
 #gem 'sqlite3'
 
 group :development, :test do
-gem 'sqlite3'
+ gem 'sqlite3'
 end
 
 
